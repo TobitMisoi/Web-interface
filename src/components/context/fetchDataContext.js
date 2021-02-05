@@ -9,7 +9,16 @@ export class FetchDataContextProvider extends Component {
         characters: [],
         books: [],
         houses: [],
-        missing: ''
+        missing: '',
+        isActive: false
+    }
+
+    showData(e) {
+        // alert('Clicked');
+        const details = this.state.characters;
+
+        console.log(details)
+        return details
     }
 
     componentDidMount() {
@@ -75,12 +84,13 @@ export class FetchDataContextProvider extends Component {
                 characters: this.state.characters,
                 // fetchData: this.fetchData,
                 books: this.state.books,
-                houses: this.state.houses
+                houses: this.state.houses,
+                showData: this.showData.bind(this),
+                isActive: this.state.isActive,
             }}>
                 {this.props.children}
             </FetchDataContext.Provider>
         )
     }
 }
-
 export default FetchDataContextProvider

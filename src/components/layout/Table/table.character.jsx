@@ -1,9 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { FetchDataContext } from '../../context/fetchDataContext'
 
 function CharacterTable() {
     const context = useContext(FetchDataContext);
+
+    const { showData, isActive } = context;
 
     const { characters } = context;
     return (
@@ -27,7 +30,19 @@ function CharacterTable() {
                                         </li>
                                     )
                                 } else {
-                                    return <li key={character.url} name={character.name} >{character.name}</li>
+                                    return (
+                                        // <li key={character.url} name={character.name} onCLick={showData} className={isActive ? "show active" : "show"} >
+                                        //     {character.name}
+                                        //     <button onClick={showData}>
+                                        //         Click Me
+                                        //     </button>
+                                        // </li>
+                                        <li>
+                                            <NavLink to="/details">
+                                                {character.name}
+                                            </NavLink>
+                                        </li>
+                                    )
                                 }
                             })}
                         </ul>

@@ -4,7 +4,7 @@ import { FetchDataContext } from '../../context/fetchDataContext';
 function BooksTable() {
     const context = useContext(FetchDataContext);
 
-    const { books } = context
+    const { books } = context;
 
     return (
         <table>

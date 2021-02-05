@@ -86,3 +86,10 @@ ul {
   list-style: none;
 
 }
+.show {
+  background: #282c34;
+  color: #f8f8f8;
+}
+.show.active {
+  background: gray;
+}
