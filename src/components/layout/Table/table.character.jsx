@@ -23,7 +23,7 @@ function CharacterTable() {
                                 if (character.name === "") {
                                     return (
                                         <li key={character.url} name={character.name} >
-                                            {character.name}
+                                            N/A
                                         </li>
                                     )
                                 } else {
@@ -37,7 +37,7 @@ function CharacterTable() {
                         <ul>
                             {characters.map((character) => {
                                 if (character.gender === "") {
-                                    console.log('jkn')
+                                    console.log('')
                                     return <li key={character.url} name={character.gender}>N/A</li>
                                 } else {
                                     return <li key={character.url} name={character.gender} >{character.gender}</li>

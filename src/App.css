@@ -54,7 +54,7 @@ td {
 table {
   margin: 0 auto;
   padding-top: 2rem;
-
+  margin-top: 2rem;
 }
 thead {
   font-weight: bolder;
@@ -84,5 +84,5 @@ thead {
 
 ul {
   list-style: none;
-  
+
 }
